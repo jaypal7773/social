@@ -7,6 +7,7 @@ const authRoutes = require('./src/routes/authRoutes');
 const postRoutes = require('./src/routes/postRoutes')
 const commentRoutes = require('./src/routes/commentRoutes')
 const adminRoutes = require('./src/routes/adminRoutes')
+const requestRoutes = require('./src/routes/requestRoutes')
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use("/auth", authRoutes);
 app.use("/post", postRoutes);
 app.use("/comment" , commentRoutes)
 app.use("/admin" , adminRoutes)
+app.use("/request", requestRoutes)
 
 // PostgreSQL Pool
 const pool = new Pool({
