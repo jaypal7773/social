@@ -3,8 +3,8 @@ const { prisma } = require('../prismaClient');
 const sendRequest = async (req, res) => {
   console.log("jhgy")
   try {
-    const senderId = req.user?.id;  // Comes from JWT
-    const { receiverId } = req.body; // Must send in JSON body
+    const senderId = req.user?.id;  
+    const { receiverId } = req.body; 
 
     if (!senderId) return res.status(401).json({ error: "Unauthorized" });
     if (!receiverId) return res.status(400).json({ error: "receiverId is required" });

@@ -19,7 +19,8 @@ app.use("/auth", authRoutes);
 app.use("/post", postRoutes);
 app.use("/comment" , commentRoutes)
 app.use("/admin" , adminRoutes)
-app.use("/request", requestRoutes)
+console.log("Hi")
+app.use('/api/requests', requestRoutes);
 
 // PostgreSQL Pool
 const pool = new Pool({
